@@ -8,7 +8,7 @@
 <img src="https://img.shields.io/badge/scope-public%20server%20tools-06131d?style=flat-square" alt="Public server tools">
 <img src="https://img.shields.io/badge/security-sensitive%20ops%20excluded-06131d?style=flat-square" alt="Sensitive operations excluded">
 
-**Public Minecraft server utilities, diagnostics, integrations and developer-facing server tooling.**
+**Public Minecraft server utilities, diagnostics, integrations and developer-facing tooling.**
 
 [Guide](GUIDE.md) · [Integrations](https://github.com/Lapinite/Leviathan-Integrations) · [Examples](https://github.com/Lapinite/Leviathan-Examples) · [Docs](https://github.com/Lapinite/Leviathan-Docs) · [Security](SECURITY.md)
 
@@ -18,44 +18,22 @@
 
 <p align="center"><img width="100%" src="assets/tool-lifecycle.svg" alt="Animated Leviathan Server Tools validation lifecycle"></p>
 
-<p align="center"><sub>A tool becomes supported only after installation, compatibility, security expectations, failure behavior and version support are documented and validated.</sub></p>
-
 ## Tooling map
 
 <p align="center"><img width="100%" src="assets/tooling-map.svg" alt="Animated Leviathan public server tooling map"></p>
 
-<p align="center"><sub>Operations, moderation and integration tools stay separated from private operational systems and proprietary detection logic.</sub></p>
+## Public boundary
 
-## Platform and service boundaries
+Public tools may cover diagnostics, moderation, compatibility and supported integrations. Private operational systems, credentials, infrastructure addresses, administrative endpoints and proprietary Nimbus detection logic remain private.
 
-Server-side integrations may exchange documented events with Leviathan public APIs, integrations, status systems, Discord/community tooling or supported Minecraft platform services. Each boundary uses explicit authentication and permission checks, validated inputs, safe logging and versioned compatibility rules.
+Supported environments and Minecraft/server versions are documented per tool after validation.
 
-Database credentials, remote-console credentials, private infrastructure addresses, internal administrative endpoints and proprietary Nimbus detection logic remain outside the public repository.
+## Nimbus
 
-## Compatibility
+Nimbus is part of the broader Leviathan security ecosystem. This repository may document public interoperability, but anti-cheat detection logic and security-sensitive implementation details stay private.
 
-Supported server software and Minecraft versions are documented per tool as implementations are released and tested. Compatibility claims should identify the exact environments that have been validated.
+## Network
 
-## Security boundaries
+[Integrations](https://github.com/Lapinite/Leviathan-Integrations) · [Examples](https://github.com/Lapinite/Leviathan-Examples) · [Docs](https://github.com/Lapinite/Leviathan-Docs) · [Status](https://github.com/Lapinite/Leviathan-Status) · [API Docs](https://github.com/Lapinite/Leviathan-API-Docs)
 
-Public code and documentation must not contain server credentials, remote-console passwords, database credentials, private keys, webhook credentials, bot tokens, private infrastructure addresses, internal administrative endpoints or personal information.
-
-Configuration examples should use placeholders or environment-variable names.
-
-## Nimbus relationship
-
-Nimbus is part of the broader Leviathan security ecosystem. Public Server Tools may document supported interoperability and public-facing server workflows, but proprietary anti-cheat implementation details and security-sensitive detection logic remain private.
-
-## Related repositories
-
-<p align="center">
-<a href="https://github.com/Lapinite/Leviathan-Integrations"><strong>Integrations</strong></a> ·
-<a href="https://github.com/Lapinite/Leviathan-Examples"><strong>Examples</strong></a> ·
-<a href="https://github.com/Lapinite/Leviathan-Docs"><strong>Docs</strong></a> ·
-<a href="https://github.com/Lapinite/Leviathan-Status"><strong>Status</strong></a> ·
-<a href="https://github.com/Lapinite/Leviathan-API-Docs"><strong>API Docs</strong></a>
-</p>
-
-## Project status
-
-This repository is being built out as public server tooling is prepared, validated and documented. Development-stage items are not automatically public releases.
+This repository is still being built out. Development-stage items are not automatically public releases.
