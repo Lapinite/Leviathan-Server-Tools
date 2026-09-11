@@ -16,65 +16,45 @@
 
 ## Tool lifecycle
 
-<p align="center">
-  <img width="100%" src="assets/tool-lifecycle.svg" alt="Animated Leviathan Server Tools validation lifecycle">
-</p>
+<p align="center"><img width="100%" src="assets/tool-lifecycle.svg" alt="Animated Leviathan Server Tools validation lifecycle"></p>
 
-A tool should not be represented as supported until its installation, compatibility, security expectations, failure behavior, version support and operational boundaries are documented.
+<p align="center"><sub>A tool becomes supported only after installation, compatibility, security expectations, failure behavior and version support are documented and validated.</sub></p>
 
-## Tooling areas
+## Tooling map
 
-<table width="100%">
-<tr>
-<td width="33%" valign="top"><strong>Operations</strong><br><sub>Administration helpers · diagnostics · configuration · compatibility utilities</sub></td>
-<td width="33%" valign="top"><strong>Moderation</strong><br><sub>Staff tooling · moderation helpers · public plugin interfaces</sub></td>
-<td width="33%" valign="top"><strong>Integration</strong><br><sub>Event bridges · supported platform integrations · server-side developer examples</sub></td>
-</tr>
-</table>
+<p align="center"><img width="100%" src="assets/tooling-map.svg" alt="Animated Leviathan public server tooling map"></p>
 
-## Scope
-
-Public server tooling may include:
-
-- server administration utilities
-- moderation and staff tooling
-- integration components
-- configuration helpers
-- diagnostics and compatibility utilities
-- public plugin interfaces
-- server-side developer examples
-
-Security-sensitive internal tooling and private operational systems are intentionally outside the scope of this public repository.
+<p align="center"><sub>Operations, moderation and integration tools stay separated from private operational systems and proprietary detection logic.</sub></p>
 
 ## Platform and service boundaries
 
-Server-side integrations may exchange documented events with Leviathan public APIs, integrations, status systems, Discord/community tooling or supported Minecraft platform services. Each boundary should use explicit authentication and permission checks, validated inputs, safe logging and versioned compatibility rules.
+Server-side integrations may exchange documented events with Leviathan public APIs, integrations, status systems, Discord/community tooling or supported Minecraft platform services. Each boundary uses explicit authentication and permission checks, validated inputs, safe logging and versioned compatibility rules.
 
 Database credentials, remote-console credentials, private infrastructure addresses, internal administrative endpoints and proprietary Nimbus detection logic remain outside the public repository.
 
 ## Compatibility
 
-Supported server software and Minecraft versions will be documented per tool as implementations are released and tested. Compatibility claims should identify the exact environments that have been validated.
+Supported server software and Minecraft versions are documented per tool as implementations are released and tested. Compatibility claims should identify the exact environments that have been validated.
 
 ## Security boundaries
 
-Public code and documentation must not contain server credentials, remote-console passwords, database credentials, private keys, webhook credentials, bot tokens, private infrastructure addresses, internal administrative endpoints, or personal information.
+Public code and documentation must not contain server credentials, remote-console passwords, database credentials, private keys, webhook credentials, bot tokens, private infrastructure addresses, internal administrative endpoints or personal information.
 
 Configuration examples should use placeholders or environment-variable names.
 
 ## Nimbus relationship
 
-Nimbus is part of the broader Leviathan security ecosystem. Public Server Tools may document supported interoperability or public-facing server workflows where appropriate, but proprietary anti-cheat implementation details and security-sensitive detection logic remain private.
+Nimbus is part of the broader Leviathan security ecosystem. Public Server Tools may document supported interoperability and public-facing server workflows, but proprietary anti-cheat implementation details and security-sensitive detection logic remain private.
 
 ## Related repositories
 
-| Repository | Role |
-| --- | --- |
-| [Leviathan Integrations](https://github.com/Lapinite/Leviathan-Integrations) | Supported integration patterns |
-| [Leviathan Examples](https://github.com/Lapinite/Leviathan-Examples) | Public implementation examples |
-| [Leviathan Docs](https://github.com/Lapinite/Leviathan-Docs) | Ecosystem documentation |
-| [Leviathan Status](https://github.com/Lapinite/Leviathan-Status) | Public service and incident information |
-| [Leviathan API Docs](https://github.com/Lapinite/Leviathan-API-Docs) | Public API contracts |
+<p align="center">
+<a href="https://github.com/Lapinite/Leviathan-Integrations"><strong>Integrations</strong></a> ·
+<a href="https://github.com/Lapinite/Leviathan-Examples"><strong>Examples</strong></a> ·
+<a href="https://github.com/Lapinite/Leviathan-Docs"><strong>Docs</strong></a> ·
+<a href="https://github.com/Lapinite/Leviathan-Status"><strong>Status</strong></a> ·
+<a href="https://github.com/Lapinite/Leviathan-API-Docs"><strong>API Docs</strong></a>
+</p>
 
 ## Project status
 
