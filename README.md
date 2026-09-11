@@ -14,6 +14,14 @@
 
 </div>
 
+## Tool lifecycle
+
+<p align="center">
+  <img width="100%" src="assets/tool-lifecycle.svg" alt="Animated Leviathan Server Tools validation lifecycle">
+</p>
+
+A tool should not be represented as supported until its installation, compatibility, security expectations, failure behavior, version support and operational boundaries are documented.
+
 ## Tooling areas
 
 <table width="100%">
@@ -38,23 +46,11 @@ Public server tooling may include:
 
 Security-sensitive internal tooling and private operational systems are intentionally outside the scope of this public repository.
 
-## Tool lifecycle
+## Platform and service boundaries
 
-```text
-Idea / requirement
-      ↓
-Public-safe design
-      ↓
-Compatibility validation
-      ↓
-Security review
-      ↓
-Documented public tool
-      ↓
-Versioned support
-```
+Server-side integrations may exchange documented events with Leviathan public APIs, integrations, status systems, Discord/community tooling or supported Minecraft platform services. Each boundary should use explicit authentication and permission checks, validated inputs, safe logging and versioned compatibility rules.
 
-A tool should not be represented as supported until its installation, compatibility, security expectations, failure behavior, and support boundaries are documented.
+Database credentials, remote-console credentials, private infrastructure addresses, internal administrative endpoints and proprietary Nimbus detection logic remain outside the public repository.
 
 ## Compatibility
 
