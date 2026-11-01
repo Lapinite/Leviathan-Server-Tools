@@ -1,0 +1,22 @@
+# Leviathan Client rules
+#
+# Turn Leviathan Client features OFF for players on this server. The client only
+# ever turns things off, never on, never saves the rules, and clears them when the
+# player leaves. Players without the Leviathan Client are not affected or messaged.
+#
+# Modules:     HUD_OVERLAY (the whole HUD), FPS_COUNTER, PING_DISPLAY, ZOOM,
+#              TOGGLE_SPRINT, TOGGLE_SNEAK
+# HUD widgets: HUD:FPS, HUD:PING, HUD:CPS, HUD:COORDINATES, HUD:CLOCK,
+#              HUD:KEYSTROKES, HUD:ARMOR_STATUS, HUD:POTIONS, HUD:SPRINT_STATE,
+#              HUD:SESSION_TIME
+#
+# Unknown names are ignored with a warning in the console. At most 64 per list.
+
+# Everywhere, unless a world below has its own list.
+default: []
+
+# A world's own list replaces the default list there.
+worlds:
+  # pvp_arena:
+  #   - ZOOM
+  #   - HUD:COORDINATES

@@ -1,0 +1,38 @@
+name: Client Rules plugin
+
+on:
+  push:
+    paths:
+      - 'plugins/client-rules/**'
+      - '.github/workflows/client-rules.yml'
+  pull_request:
+    paths:
+      - 'plugins/client-rules/**'
+      - '.github/workflows/client-rules.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: plugins/client-rules
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Build and test
+        run: mvn -B clean package
+      - name: Upload plugin jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: Leviathan-Client-Rules
+          path: plugins/client-rules/target/Leviathan-Client-Rules-*.jar
+          if-no-files-found: error
