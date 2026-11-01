@@ -4,6 +4,8 @@
 
 **Status: public tooling documentation is being prepared.** This repository does not yet contain a released utility or plugin.
 
+In development: [`plugins/client-rules`](plugins/client-rules/README.md), which lets servers turn Leviathan Client features off by world. It isn't released yet.
+
 ## Server utilities
 
 Public utilities may assist installation, configuration validation, administration, and diagnostics. Each released utility needs documented inputs, effects, permissions, backups where relevant, and removal steps. Do not publish private administrative tooling.

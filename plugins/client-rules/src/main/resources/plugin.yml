@@ -1,0 +1,16 @@
+name: LeviathanClientRules
+main: com.leviathan.servertools.clientrules.ClientRulesPlugin
+version: '${project.version}'
+api-version: '1.21'
+author: Lapinite
+description: Turns Leviathan Client modules and HUD widgets off on this server, by world.
+commands:
+  leviathanrules:
+    description: Show or reload the Leviathan Client rules.
+    aliases: [lcrules]
+    usage: /<command> [show|reload]
+    permission: leviathan.clientrules.admin
+permissions:
+  leviathan.clientrules.admin:
+    description: Show and reload Leviathan Client rules.
+    default: op
